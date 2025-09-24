@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix Countdown Dashboard</title>
+
+  <!-- Orbitron for labels/UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='matrixcountdownr/matrixcountdownr.css') }}">
+
+</head>
+<body>
+  <h1>Countdown Matrix</h1>
+
+  <div class="countdown-matrix">
+    <!-- Top-left: configurable -->
+    <div class="countdown-cell configurable">
+      <h2>Custom</h2>
+      <p class="event-date" id="date-custom"></p>
+      <input type="datetime-local" id="targetTime">
+      <button onclick="startCountdown('custom')">Start</button>
+      <div id="countdown-custom" class="countdown"></div>
+    </div>
+
+    <!-- Preset Events -->
+    <div class="countdown-cell"><h2>New Year</h2><p class="event-date" id="date-newyear"></p><div id="countdown-newyear" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Spring Equinox</h2><p class="event-date" id="date-spring"></p><div id="countdown-spring" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Summer Solstice</h2><p class="event-date" id="date-summer"></p><div id="countdown-summer" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Autumn Equinox</h2><p class="event-date" id="date-autumn"></p><div id="countdown-autumn" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Winter Solstice</h2><p class="event-date" id="date-winter"></p><div id="countdown-winter" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Valentine’s Day</h2><p class="event-date" id="date-valentine"></p><div id="countdown-valentine" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Halloween</h2><p class="event-date" id="date-halloween"></p><div id="countdown-halloween" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Thanksgiving (US)</h2><p class="event-date" id="date-thanksgiving"></p><div id="countdown-thanksgiving" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Christmas</h2><p class="event-date" id="date-christmas"></p><div id="countdown-christmas" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>My Birthday</h2><p class="event-date" id="date-birthday"></p><div id="countdown-birthday" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Independence Day (US)</h2><p class="event-date" id="date-july4"></p><div id="countdown-july4" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Labor Day (US)</h2><p class="event-date" id="date-labor"></p><div id="countdown-labor" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Mother’s Day</h2><p class="event-date" id="date-mothers"></p><div id="countdown-mothers" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Father’s Day</h2><p class="event-date" id="date-fathers"></p><div id="countdown-fathers" class="countdown"></div></div>
+    <div class="countdown-cell"><h2>Random Milestone</h2><p class="event-date" id="date-milestone"></p><div id="countdown-milestone" class="countdown"></div></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='matrixcountdownr/matrixcountdownr.js') }}"></script>
+</body>
+</html>
