@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix Countdown Dashboard</title>
+
+  <!-- Orbitron for labels/UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Countdown Matrix</h1>
+
+  <div class="countdown-matrix" id="matrix">
+    <!-- Top-left: configurable -->
+    <div class="countdown-cell configurable">
+      <h2>Custom</h2>
+      <p class="event-date" id="date-custom"></p>
+      <input type="datetime-local" id="targetTime">
+      <button onclick="startCountdown('custom')">Start</button>
+      <div id="countdown-custom" class="countdown"></div>
+    </div>
+    <!-- Preset events will be injected here dynamically by JS -->
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

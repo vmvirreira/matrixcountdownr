@@ -1,0 +1,117 @@
+/* ---- Fonts ---- */
+@font-face {
+  font-family: "DSEG7";
+  src: url("/assets/fonts/DSEG7Modern-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- General Layout ---- */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #111;
+  color: #00ff00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #00ff00;
+}
+
+/* ---- Matrix Layout ---- */
+.countdown-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  width: 95vw;
+  height: 85vh;
+  padding: 10px;
+}
+
+.countdown-cell {
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-cell h2 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #00ff00;
+  text-align: center;
+}
+
+.event-date {
+  font-size: 0.8rem;
+  color: #00ff00;
+  margin: 0 0 8px 0;
+  text-align: center;
+  opacity: 0.85;
+}
+
+/* ---- Inputs ---- */
+input, button {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  margin: 5px;
+  background: #222;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+}
+
+button:hover {
+  background: #00ff00;
+  color: #111;
+  cursor: pointer;
+}
+
+/* ---- Countdown Digits ---- */
+.countdown {
+  text-align: center;
+}
+
+.countdown .digits {
+  font-family: "DSEG7", monospace;
+  font-size: 1.6rem;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+.countdown .label {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-left: 2px;
+  margin-right: 6px;
+  color: #00ff00;
+}
+
+@media (max-width: 900px) {
+  .countdown-matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+    height: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .countdown-matrix {
+    grid-template-columns: 1fr;
+  }
+}
